@@ -257,7 +257,7 @@ class CPUSchedulerApp:
         top_comp = tk.Frame(wrapper, bg=GH["card"])
         top_comp.pack(fill=tk.X, pady=(0, 8))
 
-        self.comp_header_var = tk.StringVar(value="Algorithm Comparison (RR Quantum = 3):")
+        self.comp_header_var = tk.StringVar(value="Algorithm Comparison")
         tk.Label(
             top_comp, textvariable=self.comp_header_var,
             font=("Arial", 10, "bold"), bg=GH["card"], fg=GH["text"]
@@ -587,7 +587,7 @@ class CPUSchedulerApp:
         )
 
     def _populate_comparison_tab(self, count, quantum):
-        self.comp_header_var.set(f"Algorithm Comparison (Processes = {count}, RR Quantum = {quantum}):")
+        self.comp_header_var.set(f"Algorithm Comparison")
         self.overview_gantts["RR"]["label_var"].set(f"4. Round Robin (Q={quantum})")
 
         for item in self.comp_tree.get_children():
